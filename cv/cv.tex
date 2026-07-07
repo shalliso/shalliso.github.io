@@ -1,0 +1,351 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% Date: 3/10/17
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Shaun Allison}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  shallison@protonmail.com\\
+  \url{https://www.shaunallison.com}
+\end{minipage}
+
+
+\section*{Education and Employment}
+
+\begin{itemize}
+  \item Sessional Lecturer I, University of Toronto, [September 1, 2025 - ]
+  \item Postdoctoral fellow, University of Toronto, [August 1, 2022 - July 31, 2025]
+  \item Postdoctoral fellow, Hebrew University of Jerusalem, [July 1, 2021 to June 30, 2022].
+  \item Ph.D. Mathematics, Carnegie Mellon University, May 2021. $4.07$ GPA
+  \begin{itemize}
+      \item Dissertation: Classification of equivalence relations by Polish group actions
+      \item Advisor: Clinton Conley
+  \end{itemize}
+  \item B.S. Computer Science, Carnegie Mellon University, May 2015. $3.97$ GPA
+  \begin{itemize}
+      \item Thesis: A secure human-computable authentication scheme from the k-Junta problem
+      \item Advisors: Manuel Blum and Jeremiah Blocki
+  \end{itemize}
+  \item B.S. Mathematics (Discrete Mathematics and Logic), Carnegie Mellon University, May 2015. $3.97$ GPA
+\end{itemize}
+
+
+\section*{Other Employment}
+
+\begin{itemize}
+\item Full-time software engineer at Meta, June 2015- August 2016. 
+\item Software engineering internship at Meta, Summer 2014.
+\item Research and development internship at VMware, Summer 2013.
+\item Internship at Cisco, Summer 2012.
+\end{itemize}
+
+
+
+\section*{Publications and Preprints}
+
+
+\begin{enumerate}
+
+    \item \emph{The class and dynamics of $\alpha$-balanced Polish groups}, with Aristotelis Panagiotopoulos
+
+    Accepted \textbf{Journal of the European Mathematical Society}, 2026
+
+    Available from \url{https://arxiv.org/abs/2406.06082}
+    
+    \item \emph{Countable treeable Borel equivalence relations are classifiable by $\ell_1$}
+    
+    \textbf{Advances in Mathematics}, 2025
+    
+    Available from \url{https://arxiv.org/abs/2305.01049}
+    
+    \item \emph{Classification strength of Polish groups: Involving $S_\infty$}
+    
+    Accepted \textbf{Journal of Mathematical Logic}, 2026
+    
+    Available from \url{https://arxiv.org/abs/2304.00139}
+    
+    \item \emph{Actions of tame abelian product groups}, with Assaf Shani
+    
+    \textbf{Journal of Mathematicas Logic}, 2023
+
+    Available from
+    \url{https://arxiv.org/abs/2105.05144}.
+
+    \item \emph{Dynamical obstructions for classification by (co)homology and other TSI-group invariants}, with Aristotelis Panagiotopoulos
+    
+    \textbf{Transactions of the American Mathematical Society}, 2021
+    
+    Available from \url{https://arxiv.org/abs/2004.07409}.
+    \item \emph{Non-Archimedean TSI Polish groups and their potential Borel complexity spectrum}
+    
+    Submitted 2020
+    
+    Available from \url{https://arxiv.org/abs/2010.05085}.
+
+    
+\end{enumerate}
+
+%\emph{Listed in separate document.}
+
+\section*{Talks}
+
+\begin{itemize}
+
+    \item \emph{Polish automorphism groups that don't involve $S_\infty$}, University of Vienna, Set Theory Seminar (May 7, 2026)
+    
+    \item \emph{Revisiting Knight's model and its generalizations}, University of Vienna, Logic Colloquium (April 30, 2026)
+
+    \item \emph{A formalization of a construction due to Julia Knight in the Lean 4 theorem prover with Mathlib}, Cornell, Logic Seminar (March 20, 2026)
+    
+    \item \emph{A formalization of a construction due to Julia Knight in the Lean 4 theorem prover with Mathlib}, Fields Inistutute, Set Theory Seminar (March 27, 2026)
+
+    \item \emph{The algebra of Knight models}, Fields Institute, Set Theory Seminar (January 23, 2026)
+
+    \item \emph{The Class of CLI Polish Groups is Coanalytic-Complete}, North American Descriptive Set Theory Meeting, Brin Mathematics Research Center (October 8, 2025)
+
+    \item \emph{Automorphisms with Knight rank and bounds on cardinalities of potential Scott sentences}, Cornell Logic Seminar (April 24, 2025)
+
+    \item \emph{Automorphisms with Knight rank and bounds on cardinalities of potential Scott sentences}, University of Maryland Logic Seminar (April 22, 2025)
+
+    \item \emph{Automorphisms with Knight rank and bounds on cardinalities of potential Scott sentences}, CMU Logic Seminar (April 8, 2025)
+
+    \item \emph{Ulm-like invariants for "almost smooth" Polish group actions}, Fields Institute, Set Theory Seminar (February 14, 2025)
+    
+    \item \emph{Treeable CBERs are classifiable by an abelian Polish group}, Fields Institute, Set Theory Seminar (November 22, 2024)
+    
+    \item \emph{A hierarchy of cli Polish groups and non-reducibility results}, Caltech logic seminar (November 6, 2024)
+
+    \item \emph{A rank determining when a Polish automorphism group has less-than-maximal classification strength}, 2024 European Set Theory Conference (September 20, 2024)
+
+    \item \emph{Lower bounds in potential Borel complexity, I and I}, Fields Institute, Set Theory Seminar (January 19 and 26, 2024)
+
+    \item \emph{A hierarchy of cli Polish groups}, Fields Institute, Set Theory Seminar (November 10 and 17, 2024)
+
+    \item \emph{Treeable CBERS are classifiable by an abelian Polish group}, Cornell Logic Seminar (November 3, 2023)
+
+    \item \emph{Treeable CBERs are classifiable by an abelian Polish group}, Descriptive Dynamics and Combinatorics Seminar, Montr\'eal (October 24, 2023)
+
+    \item \emph{Polish groups involving $S_\infty$}, Structures: Descriptive Set Theory and Dynamics, Institute of Mathematics of the Polish Academy of Sciences (August 15, 2023)
+
+    \item \emph{Polish groups which don't involve $S_\infty$}, 2023 North American Annual Meeting of the Association for Symbolic Logic, Descriptive Dynamics Special Session, University of California Irvine (March 27, 2023)
+
+    \item \emph{Classification strength of Polish groups and involving $S_\infty$}, Caltech logic seminar (January 31, 2023)
+    
+    \item \emph{Polish groups involving $S_\infty$}, 2022 CMS Winter Meeting, Session on set theory and its applications (December 3, 2022)
+    
+    \item \emph{Classification strength of Polish groups I and II}, Fields Institute, Set Theory Seminar (October 7 and 14, 2022)
+    
+    \item \emph{Polish groups with the pinned property I and II}, Hebrew University, Set Theory Seminar (May 11 and 18, 2022)
+    
+    \item \emph{Applications of the Hjorth analysis of Polish group actions}, Hebrew University, Set Theory Seminar (December 22, 2021)
+    
+    \item \emph{Potential Borel complexity and tame abelian product groups}, Cornel Logic Seminar (March 26, 2021)
+    
+    \item \emph{Polish groups with the pinned property}, CMS 2020 Winter Meeting, Canadian Mathematical Society (December 8, 2020)
+    
+    \item \emph{Potential Borel complexity and tame abelian Polish groups}, Set Theory Reading Group, Carnegie Mellon University (November 24, 2020)
+    
+    \item \emph{An anticlassification result for TSI Polish groups}, Mathematial Logic Seminar, Carnegie Mellon University (November 24, 2020)
+    
+    \item \emph{Classification by TSI Polish groups}, Logic Seminar, University of Illinois at Chicago (September 1, 2020)
+    
+    \item \emph{Non-Archimedean TSI Polish groups and obstructions to Borel reducibility}, Logic Seminar, California Institute of Technology (February 12, 2020)
+    
+    \item \emph{An effective proof of the (G0, H0) dichotomy I and II}, Mathematical Logic Seminar, Carnegie Mellon University (November 5, 2019 and November 12, 2019)
+    
+    \item \emph{Applications of the Gandy-Harrington topology}, Boise Extravaganza in Set Theory, AAAS Pacific Division Annual Meeting, (June 20, 2019)
+    
+    \item \emph{Generic preturbulence and forcing}, Mathematical Logic Seminar, Carnegie Mellon University (April 30, 2019)
+    
+    \item \emph{Hjorth isomorphism and orbit equivalence relations}, Mathematical Logic Seminar, Carnegie Mellon University (April 23, 2019)
+    
+    \item \emph{Model theory and the Glimm-Effros property}, Graduate Students Conference in Logic, University of Wisconsin-Madison (April 21, 2018)
+\end{itemize}
+
+%\section*{Research Visits}
+
+%\begin{itemize}
+%    \item a
+%    \item d
+%    \item Two week visit at California Institute of Technology, hosted by Aristotelis Panagiotopoulos and Alekos Kechris (February 2020)
+%\end{itemize}
+
+\section*{Teaching}
+
+\begin{itemize}
+    \item At University of Toronto:
+    
+    \begin{enumerate}
+        \item \emph{Instructor of record}, MAT135 Differential Calculus (Fall 2025) approx. 400 students
+        \item \emph{Instructor of record}, MAT405 Introduction to Topology (Winter 2025) approx. 19 students
+
+        \item \emph{Instructor of record}, MAT309 Introduction to Logic (Fall 2024) approx. 16 students
+
+        \item \emph{Instructor of record}, MAT401 Polynomial Equations and Fields (Winter 2023) approx. 15 students
+
+        \item \emph{Instructor of record}, MAT309 Introduction to Logic (Fall 2023) approx. 11 students
+        
+        \item \emph{Instructor of record}, MAT244 Differential Equations (Winter 2023) approx. 110 students
+        
+        \item \emph{Instructor of record}, MAT102 Introduction to Proofs (Fall 2022) approx. 80 students
+    \end{enumerate}
+    
+    \item At Carnegie Mellon University:
+    
+    \begin{enumerate}
+        \item \emph{Instructor of record}, 21-127 Concepts of Mathematics (Summer 2018) approx. 20 students
+        \item \emph{Teaching assistant}, Matrices and Linear Transformations (Fall 2020), Concepts of Mathematics (Fall 2019 and Fall 2016), Matrix Theory (Fall 2018), Calculus in Three Dimensions (Spring 2018 and Fall 2017), Calculus I (Spring 2017)
+        \item \emph{Grader}, Linear Algebra (Spring 2020), and Set Theory (Spring 2020 and Spring 2019)
+    \end{enumerate}
+
+\end{itemize}
+
+\section*{Other Activities}
+
+\begin{itemize}
+    \item Formalized the construction of Knight's model in Lean
+    \item Lead an independent study with an undergraduate on model theory during the Winter 2023 semester
+    \item Organized a reading seminar on the manuscript "Geometric Set Theory" by Paul Larson and Jindrich Zapletal, and related works, during the Fall 2019 semester
+    \item Created a new informal weekly seminar for graduate students in set theory and model theory at Carnegie Mellon University in 2019, still running as of 2023.
+\end{itemize}
+
+\section*{Patents}
+
+I have two patents with a colleague during my time at Meta that involve machine learning.
+
+\begin{itemize}
+    \item Automatic recipient targeting for notifications (US10506055B2) with L. Foged (\emph{Granted})
+    \item Selecting assets (US20180027092A1) with L. Foged (\emph{Granted})
+\end{itemize}
+
+
+%\section*{Relevant Coursework}
+
+%\begin{itemize}
+%\item Independent study on Polish group actions and the Glimm-Effros Dichotomy with Clinton Conley
+%\item Reading course on descriptive graph combinatorics with Clinton Conley
+%\item (21-624) - Descriptive Set Theory
+%\item (21-800) - Descriptive Ergodic Theory
+%\item (21-640) - Functional Analysis
+%\item (21-720) - Measure Theory
+%\item (21-610) - Algebra I
+%\item (21-602) - Set Theory
+%\item (21-603) - Model Theory
+%\item (21-702) - Set Theory II (Forcing) 
+%\item (21-803) - Model Theory III (Stability Theory)
+%\end{itemize}
+
+%\begin{itemize}
+%\item Senior Research Thesis on a problem in Cryptography and Complexity Theory with Manuel Blum and Jeremiah Blocki.
+%\begin{itemize}
+%\item Met weekly with Manuel Blum for two semesters and Jeremiah Blocki for one semester. 
+%\item Included a 30-page senior thesis, 3 poster presentations, and an oral presentation.
+%\end{itemize}
+%\item Semester-long research on a problem in Graph Theory and Ramsey Theory with John Mackey.
+%\begin{itemize}
+%\item Met with John Mackey once a week for a semester and spent approximately 9 hours a week working on an independent research problem.
+%\end{itemize}
+%\end{itemize}
+
+
+
+%\section*{Honors}
+
+%\begin{itemize}
+%\item Putnam (top 500) - 2014
+%\item CMU University Honors
+%\item CMU College Honors (Computer Science)
+%\item Phi Beta Kappa
+%\end{itemize}
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
