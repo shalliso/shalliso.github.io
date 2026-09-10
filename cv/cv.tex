@@ -1,0 +1,265 @@
+% LaTeX Curriculum Vitae -- research / industry version
+%
+% Based on a template by Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% This is the version targeted at AI research and formal methods roles.
+% The full academic CV (complete talk list, full teaching record, GPAs)
+% lives in academic-cv.tex.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{geometry}
+\usepackage{xcolor}
+
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Shaun Allison}
+
+% Unfilled items render in red so they cannot ship unnoticed.
+% Delete every \todo before pushing -- the GitHub Action publishes this PDF.
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+
+\geometry{
+  body={6.5in, 8.7in},
+  left=1.0in,
+  top=1.15in
+}
+
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+\setlength\parindent{0em}
+
+% Tighter lists, no bullets at the top level
+\usepackage{enumitem}
+\setlist[itemize,1]{label={}, leftmargin=1.2em, topsep=0.35em, itemsep=0.3em,
+                    parsep=0em}
+\setlist[itemize,2]{label={--}, leftmargin=1.4em, topsep=0.2em, itemsep=0.15em,
+                    parsep=0em}
+\setlist[enumerate]{leftmargin=1.7em, topsep=0.35em, itemsep=0.35em, parsep=0em}
+
+% hyperref is loaded last, after geometry/sectsty/enumitem, per convention
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = [rgb]{0.10,0.20,0.50},
+  linkcolor = [rgb]{0.10,0.20,0.50},
+  pdfauthor = {\name},
+  pdfkeywords = {formal verification, Lean 4, Mathlib, mathematical logic,
+                 descriptive set theory, machine learning},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\begin{document}
+
+{\huge \name}
+
+\vspace{0.16in}
+
+shallison@protonmail.com \quad\textbullet\quad
+\url{https://shalliso.github.io/} \quad\textbullet\quad
+\url{https://github.com/shalliso}\\
+Toronto, Canada\\
+US citizen and Canadian permanent resident
+
+\vspace{0.16in}
+
+Mathematical logician and software engineer interested in AI-assisted mathematics, formal verification, and machine learning. Five papers in descriptive set theory, including the \emph{Journal of the European Mathematical Society}, \emph{Advances in Mathematics}, and the \emph{Journal of Mathematical Logic}; Lean~4 formalizations of mathematics; and 14 months as a software engineer at Meta, with two granted patents on machine-learned ranking.
+
+\smallskip
+\textbf{Tools:} Lean~4 with Mathlib, Python, \LaTeX{}, git, Pytorch; familiar with numpy,
+pandas, matplotlib; earlier industry work in Hack, JavaScript, Haskell,
+and C.
+
+\section*{Formal Verification}
+
+\textbf{Knight model formalization in Lean 4 and Mathlib}, 2026\\
+\url{https://github.com/shalliso/KnightModel}
+
+\begin{itemize}
+  \item Julia Knight's original result was an ad-hoc construction of a
+        structure characterizing $\aleph_1$. I generalized this and
+        formalized the resulting theory in Lean.
+  \item First stage of a project to build higher analogues characterizing
+        $\aleph_\alpha$ for every $\alpha < \omega_1$ with AI assistance.
+  \item Approximately 5{,}700 lines of Lean, developed with substantial AI
+        assistance (Claude) under my direction; the axiomatization, proof
+        architecture, and mathematical review are my own.
+  \item Presented at the Fields Institute Set Theory Seminar (March 2026), the
+        Cornell Logic Seminar (March 2026), and the University of Vienna Logic
+        Colloquium (April 2026).
+\end{itemize}
+
+\medskip
+\textbf{Automatic continuity in Lean 4 and Mathlib}, 2025\\
+\url{https://github.com/shalliso/automatic_continuity}
+
+\begin{itemize}
+  \item Complete formalization of an automatic continuity theorem:
+        every Borel-measurable homomorphism from a Polish group into a
+        separable topological group is continuous.
+  \item Approximately 300 lines of Lean, written by hand.
+\end{itemize}
+
+\section*{Employment}
+
+\begin{itemize}
+  \item \textbf{Independent Researcher}, January 2026 -- present
+  \begin{itemize}
+    \item Built the Lean 4 formalization described above
+    \item Completed revisions on two papers accepted in 2026 (JEMS, JML)
+    \item Research visits to Cornell University and the University of Vienna;
+          upcoming visit to the Institute for Advanced Study in Mathematics,
+          Zhejiang University
+    \item Writing a mathematical logic textbook with Spencer Unger
+  \end{itemize}
+
+  \item \textbf{Sessional Lecturer I}, University of Toronto,
+        September 2025 -- December 2025
+
+  \item \textbf{Postdoctoral Fellow}, University of Toronto,
+        August 2022 -- July 2025
+
+  \item \textbf{Postdoctoral Fellow}, Hebrew University of Jerusalem,
+        July 2021 -- June 2022
+
+  \item \textbf{Software Engineer}, Meta (then Facebook),
+        June 2015 -- August 2016
+  \begin{itemize}
+    \item Games team: machine-learned targeting of ads and notifications ---
+          deciding which users to reach and with what. Two patents granted.
+  \end{itemize}
+
+  \item \textbf{Software Engineering Intern}, Meta, Summer 2014
+  \item \textbf{Research and Development Intern}, VMware, Summer 2013
+  \item \textbf{Intern}, Cisco, Summer 2012
+\end{itemize}
+
+\section*{Patents}
+
+\begin{itemize}
+  \item \emph{Automatic recipient targeting for notifications} (US10506055B2),
+        with L. Foged. Granted. Machine-learned selection of which users
+        should receive a given notification.
+  \item \emph{Selecting assets} (US11019177B2), with L. Foged. Granted.
+        Machine-learned selection of which creative asset to serve.
+\end{itemize}
+
+\section*{Publications and Preprints}
+
+\begin{enumerate}
+  \item \emph{The class and dynamics of $\alpha$-balanced Polish groups}, with
+        Aristotelis Panagiotopoulos.\\
+        \textbf{Journal of the European Mathematical Society}, 2026.
+        \url{https://doi.org/10.4171/JEMS/1798}
+
+  \item \emph{Countable Borel treeable equivalence relations are classifiable
+        by $\ell_1$}.\\
+        \textbf{Advances in Mathematics} 479, 2025.
+        \url{https://doi.org/10.1016/j.aim.2025.110452}
+
+  \item \emph{Classification strength of Polish groups: Involving $S_\infty$}.\\
+        \textbf{Journal of Mathematical Logic}, 2026.
+        \url{https://doi.org/10.1142/S0219061326500054}
+
+  \item \emph{Actions of tame abelian product groups}, with Assaf Shani.\\
+        \textbf{Journal of Mathematical Logic} 23(3), 2023.
+        \url{https://doi.org/10.1142/S0219061322500283}
+
+  \item \emph{Dynamical obstructions to classification by (co)homology and
+        other TSI-group invariants}, with Aristotelis Panagiotopoulos.\\
+        \textbf{Transactions of the American Mathematical Society} 374, 2021.
+        \url{https://doi.org/10.1090/tran/8475}
+
+  \item \emph{Non-Archimedean TSI Polish groups and their potential Borel
+        complexity spectrum}.\\
+        Preprint, 2020. \url{https://arxiv.org/abs/2010.05085}
+\end{enumerate}
+
+\smallskip
+\emph{In preparation:} a textbook on mathematical logic, with Spencer Unger.
+
+\section*{Education}
+
+\begin{itemize}
+  \item \textbf{Ph.D. Mathematics}, Carnegie Mellon University, 2021
+  \begin{itemize}
+    \item Dissertation: \emph{Classification of equivalence relations by
+          Polish group actions}. Advisor: Clinton Conley
+  \end{itemize}
+  \item \textbf{B.S. Computer Science}, Carnegie Mellon University, 2015
+  \begin{itemize}
+    \item Thesis: \emph{A secure human-computable authentication scheme from
+          the $k$-Junta problem}. Advisors: Manuel Blum and Jeremiah Blocki
+  \end{itemize}
+  \item \textbf{B.S. Mathematics} (Discrete Mathematics and Logic),
+        Carnegie Mellon University, 2015
+\end{itemize}
+
+\section*{Awards}
+
+\begin{itemize}
+  \item Putnam Competition, top 500 (2014)
+  \item Carnegie Mellon University Honors; College Honors (Computer Science)
+  \item Phi Beta Kappa
+\end{itemize}
+
+\section*{Selected Talks}
+
+Talks on the Lean formalization are listed under Formal Verification above.
+Full list available on request.
+
+\begin{itemize}
+  \item \emph{Polish automorphism groups that don't involve $S_\infty$},
+        University of Vienna Set Theory Seminar (May 2026)
+  \item \emph{The class of CLI Polish groups is coanalytic-complete}, North
+        American Descriptive Set Theory Meeting, Brin Mathematics Research
+        Center (October 2025)
+  \item \emph{A hierarchy of CLI Polish groups and non-reducibility results},
+        Caltech Logic Seminar (November 2024)
+  \item \emph{A rank determining when a Polish automorphism group has
+        less-than-maximal classification strength}, European Set Theory
+        Conference (September 2024)
+  \item \emph{Polish groups involving $S_\infty$}, Structures: Descriptive Set
+        Theory and Dynamics, Institute of Mathematics of the Polish Academy of
+        Sciences (August 2023)
+  \item \emph{Polish groups which don't involve $S_\infty$}, North American
+        Annual Meeting of the Association for Symbolic Logic, UC Irvine
+        (March 2023)
+  \item \emph{Polish groups with the pinned property}, CMS Winter Meeting,
+        Canadian Mathematical Society (December 2020)
+  \item \emph{Applications of the Gandy-Harrington topology}, Boise
+        Extravaganza in Set Theory, AAAS Pacific Division (June 2019)
+\end{itemize}
+
+\section*{Teaching}
+
+\begin{itemize}
+  \item Instructor of record for eight courses at the University of Toronto and
+        Carnegie Mellon University (2018--2025), from Differential Calculus
+        (approx.\ 400 students) to upper-year Topology, Logic, and Field theory.
+  \item Supervised an undergraduate independent study in model theory
+        (Winter 2023)
+  \item Founded a weekly graduate seminar in set theory and model theory at
+        Carnegie Mellon University (2019)
+\end{itemize}
+
+\bigskip
+
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today
+  \end{footnotesize}
+\end{center}
+
+\end{document}

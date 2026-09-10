@@ -19,15 +19,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile cv.tex
+      - name: Compile cv.tex and academic-cv.tex
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv.tex
+          root_file: |
+            cv.tex
+            academic-cv.tex
           working_directory: cv
 
       - name: Copy PDFs to site root
         run: |
           cp cv/cv.pdf ./cv.pdf
+          cp cv/academic-cv.pdf ./academic-cv.pdf
 
       - name: Commit updated PDFs
         run: |
