@@ -19,23 +19,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile cv.tex and academic-cv.tex
+      # All three are compiled so CI catches breakage in any of them.
+      # cv.pdf and resume.pdf are published; academic-cv.pdf is not.
+      - name: Compile all documents
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
             cv.tex
             academic-cv.tex
+            resume.tex
           working_directory: cv
 
-      - name: Copy PDFs to site root
+      - name: Copy published PDFs to site root
         run: |
           cp cv/cv.pdf ./cv.pdf
-          cp cv/academic-cv.pdf ./academic-cv.pdf
+          cp cv/resume.pdf ./resume.pdf
 
       - name: Commit updated PDFs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f cv.pdf
-          git diff --staged --quiet || git commit -m "Auto-update resume and CV PDFs"
+          git add -f cv.pdf resume.pdf
+          git diff --staged --quiet || git commit -m "Auto-update CV and resume PDFs"
           git push

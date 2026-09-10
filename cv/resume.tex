@@ -1,0 +1,156 @@
+% One-page resume -- general software engineering roles.
+%
+% The research-oriented CV (AI / formal methods) is cv.tex.
+% The full academic CV is academic-cv.tex.
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+\def\name{Shaun Allison}
+
+% Unfilled items render in red so they cannot ship unnoticed.
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+
+\geometry{
+  letterpaper,
+  top=0.6in, bottom=0.6in, left=0.75in, right=0.75in
+}
+
+\pagestyle{empty}
+
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\large\scshape}
+
+\setlength\parindent{0em}
+
+\usepackage{enumitem}
+\setlist[itemize,1]{label={--}, leftmargin=1.1em, topsep=0.15em, itemsep=0.1em,
+                    parsep=0em}
+
+% Tighten section spacing to hold one page
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+\titleformat{\section}{\rmfamily\mdseries\large\scshape}{}{0em}{}[\vspace{-4pt}\rule{\linewidth}{0.4pt}]
+
+% Job heading: title, org, dates
+\newcommand{\role}[3]{\textbf{#1} \textnormal{---} #2 \hfill #3\par\vspace{1pt}}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=[rgb]{0.10,0.20,0.50},
+  pdfauthor={\name},
+  pdftitle={\name: Resume},
+  pdfsubject={Resume}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \name}\\[3pt]
+  shallison@protonmail.com \quad\textbullet\quad
+  \url{https://shalliso.github.io/} \quad\textbullet\quad
+  \url{https://github.com/shalliso}\\[1pt]
+  Toronto, Canada \quad\textbullet\quad US citizen and Canadian permanent
+  resident
+\end{center}
+
+\vspace{2pt}
+
+Software engineer with a computer science degree from Carnegie Mellon and a
+PhD in mathematics. Built machine-learned ad and notification targeting at
+Meta, holding two granted patents from that work, then spent a decade in
+mathematical research --- most recently writing large Lean 4 formalizations and
+publishing in top mathematics journals. Returning to industry engineering.
+
+\section{Skills}
+
+\begin{itemize}
+  \item \textbf{Languages:} Python, Lean 4 (current); Hack, JavaScript,
+        Haskell, C (industry use, 2012--2016)
+  \item \textbf{Tools:} git, Mathlib, \LaTeX{}; familiar with numpy, pandas,
+        matplotlib, PyTorch
+  \item \textbf{Domains:} formal verification, machine-learned ranking and
+        targeting, mathematical logic
+\end{itemize}
+
+\section{Experience}
+
+\role{Software Engineer}{Meta (then Facebook)}{June 2015 -- August 2016}
+\begin{itemize}
+  \item Built machine-learned targeting for ads and notifications on the Games
+        team --- deciding which users to reach and with what.
+  \item Work produced two granted patents on machine-learned ranking (below).
+\end{itemize}
+
+\vspace{3pt}
+\role{Postdoctoral Fellow / Lecturer}{Univ.\ of Toronto; Hebrew Univ.\ of
+Jerusalem}{2021 -- 2025}
+\begin{itemize}
+  \item Independent research program in mathematical logic; published in the
+        \emph{Journal of the European Mathematical Society}, \emph{Advances in
+        Mathematics}, and the \emph{Journal of Mathematical Logic}.
+  \item Instructor of record for eight courses, including a 400-student
+        calculus class --- scoping a syllabus, building assessments, and
+        managing a teaching staff.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Independent Research} \hfill January 2026 -- present\par\vspace{1pt}
+\begin{itemize}
+  \item Two Lean 4 formalization projects (below); carried two journal papers
+        through revision to acceptance.
+  \item Writing a textbook on mathematical logic with Spencer Unger, alongside
+        continuing research in descriptive set theory.
+  \item Research visits to Cornell University and the University of Vienna;
+        upcoming visit to the Institute for Advanced Study in Mathematics,
+        Zhejiang University.
+\end{itemize}
+
+\vspace{4pt}
+\emph{Earlier:} software engineering internship at Meta (2014); research and
+development at VMware (2013); Cisco (2012).
+
+\section{Projects}
+
+\textbf{Knight model formalization} --- Lean 4, Mathlib, 2026 \hfill
+\url{https://github.com/shalliso/KnightModel}
+\begin{itemize}
+  \item $\sim$5,700 lines of Lean formalizing a generalization of a classical
+        model-theoretic construction. Developed with substantial AI assistance
+        (Claude) under my direction; the mathematics and proof architecture are
+        my own.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Automatic continuity} --- Lean 4, Mathlib, 2025 \hfill
+\url{https://github.com/shalliso/automatic_continuity}
+\begin{itemize}
+  \item $\sim$300 lines of Lean, written by hand. Complete machine-checked
+        proof of a classical theorem in topological group theory.
+\end{itemize}
+
+\section{Patents}
+
+\begin{itemize}
+  \item \emph{Automatic recipient targeting for notifications} (US10506055B2)
+        --- machine-learned selection of notification recipients. Granted.
+  \item \emph{Selecting assets} (US11019177B2) --- machine-learned selection of
+        which creative asset to serve. Granted.
+\end{itemize}
+
+\section{Education}
+
+\begin{itemize}
+  \item \textbf{Ph.D. Mathematics}, Carnegie Mellon University, 2021
+  \item \textbf{B.S. Computer Science} and \textbf{B.S. Mathematics}
+        (Discrete Mathematics and Logic), Carnegie Mellon University, 2015
+  \item Putnam Competition top 500; CMU College Honors (Computer Science);
+        Phi Beta Kappa
+\end{itemize}
+
+\end{document}
